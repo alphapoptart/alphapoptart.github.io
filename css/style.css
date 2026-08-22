@@ -1,0 +1,274 @@
+/* Villages Tech Concierge — designed for a 55+ audience:
+   large type (18px base), high contrast, generous tap targets. */
+
+:root {
+  --navy: #1a2a52;        /* headings / dark text */
+  --ink: #222833;         /* body text on white: 12.6:1 */
+  --blue: #1d4ed8;        /* links & primary buttons: 7.3:1 on white */
+  --blue-dark: #16389f;
+  --gold-bg: #fdf3dd;
+  --gold-border: #b8860b;
+  --cream: #f5f1e8;
+  --white: #ffffff;
+  --border: #c9c4b4;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.25rem;          /* 20px base for readability */
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--white);
+}
+
+.wrap { max-width: 1100px; margin: 0 auto; padding: 0 1.25rem; }
+
+h1, h2, h3 {
+  font-family: Verdana, Arial, sans-serif;
+  color: var(--navy);
+  line-height: 1.25;
+}
+h1 { font-size: 2.25rem; }
+h2 { font-size: 1.75rem; margin-top: 2.25rem; }
+h3 { font-size: 1.35rem; }
+
+p, li { font-size: 1.125rem; }   /* 18px minimum everywhere */
+
+a { color: var(--blue); }
+a:hover { color: var(--blue-dark); }
+
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+.skip-link {
+  position: absolute; left: -9999px; top: 0;
+  background: var(--navy); color: #fff; padding: 0.75rem 1.25rem; z-index: 100;
+}
+.skip-link:focus { left: 0; }
+
+/* ---------- Header ---------- */
+.site-header {
+  background: var(--navy);
+  border-bottom: 6px solid var(--gold-border);
+}
+.header-inner {
+  display: flex; flex-wrap: wrap; align-items: center;
+  gap: 0.75rem 1.25rem; padding-top: 0.75rem; padding-bottom: 0.75rem;
+}
+.brand {
+  display: flex; align-items: center; gap: 0.6rem;
+  text-decoration: none; margin-right: auto;
+}
+.brand-mark {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 3rem; height: 3rem; border-radius: 50%;
+  background: var(--gold-bg); color: var(--navy);
+  font-family: Verdana, sans-serif; font-weight: bold; font-size: 1.15rem;
+  border: 3px solid var(--gold-border);
+}
+.brand-name {
+  color: #fff; font-family: Verdana, sans-serif;
+  font-size: 1.35rem; font-weight: bold;
+}
+.header-phone {
+  background: var(--gold-bg); color: var(--navy) !important;
+  font-family: Verdana, sans-serif; font-weight: bold; font-size: 1.05rem;
+  padding: 0.55rem 1rem; border-radius: 8px; text-decoration: none;
+  border: 2px solid var(--gold-border);
+}
+
+.nav-toggle {
+  display: none;
+  background: transparent; color: #fff;
+  border: 2px solid #fff; border-radius: 8px;
+  font: inherit; font-size: 1.05rem; padding: 0.5rem 1rem; cursor: pointer;
+}
+.site-nav ul { list-style: none; display: flex; gap: 0.25rem; margin: 0; padding: 0; flex-wrap: wrap; }
+.site-nav a {
+  display: block; color: #fff; text-decoration: none;
+  font-family: Verdana, sans-serif; font-size: 1.05rem;
+  padding: 0.6rem 0.85rem; border-radius: 6px;
+}
+.site-nav a:hover { background: rgba(255,255,255,0.15); }
+.site-nav a[aria-current="page"] {
+  background: var(--gold-bg); color: var(--navy); font-weight: bold;
+}
+
+/* ---------- Hero / sections ---------- */
+.hero { background: var(--cream); padding: 3rem 0 2.5rem; }
+.hero-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 2.5rem; align-items: start; }
+.tagline {
+  font-size: 1.35rem; color: var(--navy);
+  font-style: italic; margin-bottom: 0.75rem;
+}
+.lede { font-size: 1.2rem; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; margin: 1.25rem 0; }
+.hero-note { font-size: 1rem; color: var(--ink); }
+
+.trust-card {
+  background: var(--white); border: 3px solid var(--gold-border);
+  border-radius: 14px; padding: 1.25rem 1.5rem;
+}
+.trust-card h2 { margin-top: 0.25rem; font-size: 1.35rem; }
+
+.section { padding: 2.5rem 0 3rem; }
+.alt-bg { background: var(--cream); }
+.center { text-align: center; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+.about-grid { display: grid; grid-template-columns: 1fr 2.2fr; gap: 2.5rem; align-items: start; }
+
+.page-hero { background: var(--cream); padding: 2.25rem 0; border-bottom: 4px solid var(--gold-border); }
+.page-hero h1 { margin: 0 0 0.5rem; }
+.page-hero p { font-size: 1.2rem; margin: 0; max-width: 60ch; }
+
+.photo-placeholder {
+  min-height: 280px; border-radius: 14px;
+  background: var(--navy); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center; font-family: Verdana, sans-serif;
+  font-size: 1.1rem; padding: 1rem; border: 3px solid var(--gold-border);
+}
+
+/* ---------- Cards ---------- */
+.card-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+.three-col { grid-template-columns: repeat(3, 1fr); }
+.card {
+  background: var(--white); border: 2px solid var(--border);
+  border-radius: 14px; padding: 1.5rem;
+}
+.alt-bg .card { background: var(--white); }
+.card h3 { margin-top: 0; }
+.price {
+  font-family: Verdana, sans-serif; font-weight: bold;
+  font-size: 1.5rem; color: var(--navy); margin: 0.35rem 0 0.75rem;
+}
+.price-detail { font-size: 1rem; font-weight: normal; color: var(--ink); }
+
+.plan.featured { border: 3px solid var(--gold-border); position: relative; }
+.badge {
+  display: inline-block; background: var(--gold-bg);
+  border: 2px solid var(--gold-border); border-radius: 999px;
+  font-family: Verdana, sans-serif; font-size: 0.95rem; font-weight: bold;
+  color: var(--navy); padding: 0.2rem 0.9rem; margin: 0 0 0.5rem;
+}
+
+.testimonial { font-style: italic; background: var(--white); }
+.testimonial footer { font-style: normal; font-weight: bold; color: var(--navy); }
+
+.check-list { padding-left: 1.25rem; }
+.check-list li { margin-bottom: 0.5rem; }
+.check-list.small li { margin-bottom: 0.35rem; font-size: 1.05rem; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block; text-decoration: none;
+  font-family: Verdana, sans-serif; font-weight: bold; font-size: 1.15rem;
+  padding: 0.85rem 1.6rem; border-radius: 10px; cursor: pointer;
+}
+.btn-primary {
+  background: var(--blue); color: #fff !important;   /* 7.3:1 contrast */
+  border: 2px solid var(--blue-dark);
+}
+.btn-primary:hover, .btn-primary:focus { background: var(--blue-dark); }
+.btn-secondary {
+  background: var(--white); color: var(--navy);
+  border: 3px solid var(--navy);
+}
+.btn-secondary:hover, .btn-secondary:focus { background: var(--cream); }
+.btn-big { font-size: 1.35rem; padding: 1rem 2.2rem; }
+
+/* ---------- Price table ---------- */
+.price-table {
+  width: 100%; border-collapse: collapse; margin: 1.5rem 0 2.5rem;
+  background: var(--white);
+}
+.price-table th, .price-table td {
+  border: 2px solid var(--border); padding: 0.85rem 1rem;
+  text-align: left; vertical-align: top; font-size: 1.05rem;
+}
+.price-table thead th {
+  background: var(--navy); color: #fff;
+  font-family: Verdana, sans-serif; font-size: 1.1rem;
+}
+.price-table tbody th { font-family: Verdana, sans-serif; color: var(--navy); }
+.price-table td:last-child { font-weight: bold; white-space: nowrap; color: var(--navy); }
+.price-table tbody tr:nth-child(even) { background: var(--cream); }
+.tier-note { font-style: italic; max-width: 70ch; }
+
+/* ---------- CTA band ---------- */
+.cta-band {
+  background: var(--navy); color: #fff; padding: 2.75rem 0; margin-top: 2rem;
+}
+.cta-band h2 { color: #fff; margin-top: 0; }
+.cta-band p { font-size: 1.25rem; }
+.cta-band.slim {
+  margin-top: 2.5rem; border-radius: 14px; padding: 2rem;
+}
+
+/* ---------- Contact form ---------- */
+.contact-card {
+  background: var(--white); border: 2px solid var(--border);
+  border-radius: 14px; padding: 1.75rem;
+}
+.big-phone a {
+  font-family: Verdana, sans-serif; font-weight: bold;
+  font-size: 2rem; color: var(--blue); text-decoration: underline;
+}
+.contact-form label {
+  display: block; font-family: Verdana, sans-serif;
+  font-weight: bold; margin: 1rem 0 0.35rem; color: var(--navy);
+}
+.contact-form input, .contact-form textarea {
+  width: 100%; font: inherit; font-size: 1.1rem;
+  padding: 0.75rem; border: 2px solid var(--navy); border-radius: 8px;
+  background: #fff; color: var(--ink);
+}
+.contact-form button { margin-top: 1.25rem; border: none; }
+.form-note { font-size: 0.95rem !important; font-style: italic; }
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--navy); color: #f0ede4;
+  padding: 2.25rem 0 1rem; margin-top: 3rem;
+  border-top: 6px solid var(--gold-border);
+}
+.footer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.site-footer a { color: #ffffff; }
+.site-footer p { font-size: 1.05rem; margin: 0.35rem 0; }
+.footer-brand {
+  font-family: Verdana, sans-serif; font-weight: bold;
+  font-size: 1.25rem; color: #fff;
+}
+.footer-heading {
+  font-family: Verdana, sans-serif; font-weight: bold;
+  color: var(--gold-bg); text-transform: uppercase; letter-spacing: 0.05em;
+  font-size: 1rem;
+}
+.copyright { text-align: center; margin-top: 2rem; font-size: 0.95rem; }
+
+/* ---------- Mobile ---------- */
+@media (max-width: 900px) {
+  .hero-grid, .two-col, .about-grid { grid-template-columns: 1fr; }
+  .card-grid, .three-col { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .header-phone { order: 3; width: 100%; text-align: center; }
+}
+
+@media (max-width: 720px) {
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.45rem; }
+  .nav-toggle { display: block; }
+  .site-nav { display: none; width: 100%; order: 4; }
+  .site-nav.open { display: block; }
+  .site-nav ul { flex-direction: column; }
+  .brand-name { font-size: 1.15rem; }
+  .hero-actions .btn { width: 100%; text-align: center; }
+  .cta-band .btn { width: 100%; text-align: center; }
+}
