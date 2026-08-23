@@ -4,6 +4,8 @@ Owner: Sean Widner · Call/text: (352) 875-0467 · Company Gmail: [CREATE COMPAN
 
 For the recommended starter rates, prohibited work, consent rules, and escalation boundaries, use [pricing-and-scope-guide.md](pricing-and-scope-guide.md).
 
+Quick Fix Check-in: **$20 / 15 minutes, remote only** — one simple question or quick setting check. See the pricing-and-scope guide for limits.
+
 Use this as a customer-facing menu. Replace bracketed details and confirm the final prices, tax treatment, travel policy, and availability for your location before publishing.
 
 ## A simple first appointment
