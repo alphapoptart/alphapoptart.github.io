@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="3.5in" height="2in" viewBox="0 0 1050 600" role="img" aria-labelledby="title desc">
+  <title id="title">Editable Tech Concierge business card — back</title>
+  <desc id="desc">Replace all bracketed placeholders before printing.</desc>
+  <rect width="1050" height="600" fill="#F7F8F4"/>
+  <rect x="0" y="0" width="22" height="600" fill="#18A999"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#101820">
+    <text x="90" y="112" font-size="22" letter-spacing="5" fill="#18A999">SEAN WIDNER • TECH CONCIERGE</text>
+    <text x="90" y="200" font-size="48" font-weight="700">Tech help,</text>
+    <text x="90" y="258" font-size="48" font-weight="700">without the headache.</text>
+    <text x="90" y="340" font-size="25" fill="#40525A">(352) 875-0467  •  [COMPANY GMAIL]</text>
+    <text x="90" y="388" font-size="25" fill="#40525A">[WEBSITE]</text>
+    <text x="90" y="470" font-size="21" fill="#40525A">Appointments by phone, video, or in person.</text>
+    <text x="90" y="525" font-size="18" letter-spacing="2" fill="#18A999">[SERVICE AREA]  |  [SOCIAL HANDLE]</text>
+  </g>
+  <g transform="translate(790 165)">
+    <rect width="170" height="170" rx="18" fill="#101820"/>
+    <path d="M28 32h114v106H28z" fill="none" stroke="#F5B841" stroke-width="6"/>
+    <path d="M55 75h60M55 98h60M55 121h38" stroke="#F7F8F4" stroke-width="8" stroke-linecap="round"/>
+    <text x="85" y="205" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#40525A">QR → [BOOKING LINK]</text>
+  </g>
+</svg>

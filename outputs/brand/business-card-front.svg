@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="3.5in" height="2in" viewBox="0 0 1050 600" role="img" aria-labelledby="title desc">
+  <title id="title">Editable Tech Concierge business card — front</title>
+  <desc id="desc">Replace all bracketed placeholders before printing.</desc>
+  <rect width="1050" height="600" fill="#101820"/>
+  <circle cx="910" cy="80" r="220" fill="#18A999" opacity="0.14"/>
+  <circle cx="1020" cy="470" r="180" fill="#F5B841" opacity="0.10"/>
+  <path d="M0 500 L250 600 H0Z" fill="#18A999" opacity="0.92"/>
+  <g fill="#F7F8F4" font-family="Arial, Helvetica, sans-serif">
+    <text x="86" y="170" font-size="30" letter-spacing="7" fill="#F5B841">NORTHSTAR TECH CONCIERGE</text>
+    <text x="86" y="276" font-size="78" font-weight="700">Tech</text>
+    <text x="86" y="358" font-size="78" font-weight="700">Concierge</text>
+    <text x="90" y="430" font-size="24" letter-spacing="2" fill="#B7C9C6">CALM, CAPABLE HELP FOR YOUR EVERYDAY TECH</text>
+  </g>
+  <g transform="translate(865 370)" fill="none" stroke="#F5B841" stroke-width="8">
+    <rect x="0" y="0" width="90" height="90" rx="22"/>
+    <path d="M25 46h40M45 26v40"/>
+  </g>
+  <text x="86" y="548" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#B7C9C6">SEAN WIDNER • (352) 875-0467 • EDIT BEFORE PRINTING</text>
+</svg>
