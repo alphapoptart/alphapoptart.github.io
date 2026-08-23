@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Northstar Tech Concierge icon</title>
+  <desc id="desc">A lime north star on a navy background.</desc>
+  <rect width="512" height="512" rx="112" fill="#102b35"/>
+  <circle cx="256" cy="256" r="158" fill="none" stroke="#39545b" stroke-width="8"/>
+  <path d="M256 92 291 220l129 36-129 36-35 128-35-128-129-36 129-36Z" fill="#ccf265"/>
+  <circle cx="256" cy="256" r="23" fill="#102b35"/>
+</svg>
