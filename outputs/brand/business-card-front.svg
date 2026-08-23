@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="3.5in" height="2in" viewBox="0 0 1050 600" role="img" aria-labelledby="title desc">
-  <title id="title">Editable Tech Concierge business card — front</title>
-  <desc id="desc">Replace all bracketed placeholders before printing.</desc>
-  <rect width="1050" height="600" fill="#101820"/>
-  <circle cx="910" cy="80" r="220" fill="#18A999" opacity="0.14"/>
-  <circle cx="1020" cy="470" r="180" fill="#F5B841" opacity="0.10"/>
-  <path d="M0 500 L250 600 H0Z" fill="#18A999" opacity="0.92"/>
-  <g fill="#F7F8F4" font-family="Arial, Helvetica, sans-serif">
-    <text x="86" y="170" font-size="30" letter-spacing="7" fill="#F5B841">NORTHSTAR TECH CONCIERGE</text>
-    <text x="86" y="276" font-size="78" font-weight="700">Tech</text>
-    <text x="86" y="358" font-size="78" font-weight="700">Concierge</text>
-    <text x="90" y="430" font-size="24" letter-spacing="2" fill="#B7C9C6">CALM, CAPABLE HELP FOR YOUR EVERYDAY TECH</text>
+  <title id="title">Northstar Tech Concierge business card front</title>
+  <desc id="desc">Professional navy and lime business card for Sean Widner.</desc>
+  <rect width="1050" height="600" rx="18" fill="#102b35"/>
+  <path d="M0 0h1050v22H0z" fill="#ccf265"/>
+  <circle cx="880" cy="116" r="205" fill="#18a999" opacity=".16"/>
+  <circle cx="930" cy="115" r="130" fill="none" stroke="#39545b" stroke-width="3"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#f7f8f4">
+    <text x="82" y="142" font-size="24" letter-spacing="6" fill="#ccf265">NORTHSTAR</text>
+    <text x="82" y="236" font-size="76" font-weight="700" letter-spacing="-2">Tech</text>
+    <text x="82" y="315" font-size="76" font-weight="700" letter-spacing="-2">Concierge</text>
+    <text x="84" y="373" font-size="20" letter-spacing="2" fill="#b7c9c6">CALM, CAPABLE HELP FOR EVERYDAY TECH</text>
+    <text x="84" y="490" font-size="22" font-weight="700">SEAN WIDNER</text>
+    <text x="84" y="525" font-size="19" fill="#b7c9c6">(352) 875-0467  •  alphapoptart.github.io</text>
   </g>
-  <g transform="translate(865 370)" fill="none" stroke="#F5B841" stroke-width="8">
-    <rect x="0" y="0" width="90" height="90" rx="22"/>
-    <path d="M25 46h40M45 26v40"/>
+  <g transform="translate(760 240)">
+    <rect x="-18" y="-18" width="226" height="226" rx="14" fill="#fff"/>
+    <image href="data:image/png;base64,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" x="0" y="0" width="190" height="190"/>
+    <text x="95" y="232" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" letter-spacing="1" fill="#ccf265">SCAN FOR THE SITE</text>
   </g>
-  <text x="86" y="548" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#B7C9C6">SEAN WIDNER • (352) 875-0467 • EDIT BEFORE PRINTING</text>
 </svg>

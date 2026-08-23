@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="3.5in" height="2in" viewBox="0 0 1050 600" role="img" aria-labelledby="title desc">
-  <title id="title">Editable Tech Concierge business card — back</title>
-  <desc id="desc">Replace all bracketed placeholders before printing.</desc>
-  <rect width="1050" height="600" fill="#F7F8F4"/>
-  <rect x="0" y="0" width="22" height="600" fill="#18A999"/>
-  <g font-family="Arial, Helvetica, sans-serif" fill="#101820">
-    <text x="90" y="112" font-size="22" letter-spacing="5" fill="#18A999">SEAN WIDNER • TECH CONCIERGE</text>
-    <text x="90" y="200" font-size="48" font-weight="700">Tech help,</text>
-    <text x="90" y="258" font-size="48" font-weight="700">without the headache.</text>
-    <text x="90" y="340" font-size="25" fill="#40525A">(352) 875-0467  •  [COMPANY GMAIL]</text>
-    <text x="90" y="388" font-size="25" fill="#40525A">[WEBSITE]</text>
-    <text x="90" y="470" font-size="21" fill="#40525A">Appointments by phone, video, or in person.</text>
-    <text x="90" y="525" font-size="18" letter-spacing="2" fill="#18A999">[SERVICE AREA]  |  [SOCIAL HANDLE]</text>
+  <title id="title">Northstar Tech Concierge business card back</title>
+  <desc id="desc">Professional contact card with a QR code linking to the Northstar website.</desc>
+  <rect width="1050" height="600" rx="18" fill="#f7f8f4"/>
+  <rect width="28" height="600" fill="#ccf265"/>
+  <rect x="28" width="8" height="600" fill="#18a999"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#102b35">
+    <text x="88" y="108" font-size="22" letter-spacing="4" font-weight="700" fill="#18a999">SEAN WIDNER  /  TECH CONCIERGE</text>
+    <text x="88" y="205" font-size="46" font-weight="700">Technology,</text>
+    <text x="88" y="260" font-size="46" font-weight="700">made human.</text>
+    <line x1="88" y1="300" x2="610" y2="300" stroke="#dbe3de" stroke-width="3"/>
+    <text x="88" y="360" font-size="27" font-weight="700">(352) 875-0467</text>
+    <text x="88" y="405" font-size="22" fill="#40525a">alphapoptart.github.io</text>
+    <text x="88" y="472" font-size="20" fill="#40525a">Appointments by phone, video, or in person.</text>
+    <text x="88" y="525" font-size="17" letter-spacing="1.5" fill="#18a999">SCAN TO VISIT NORTHSTAR ONLINE</text>
   </g>
-  <g transform="translate(790 165)">
-    <rect width="170" height="170" rx="18" fill="#101820"/>
-    <path d="M28 32h114v106H28z" fill="none" stroke="#F5B841" stroke-width="6"/>
-    <path d="M55 75h60M55 98h60M55 121h38" stroke="#F7F8F4" stroke-width="8" stroke-linecap="round"/>
-    <text x="85" y="205" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#40525A">QR → [BOOKING LINK]</text>
+  <g transform="translate(770 128)">
+    <rect x="-22" y="-22" width="250" height="250" rx="18" fill="#102b35"/>
+    <rect x="-8" y="-8" width="222" height="222" rx="8" fill="#fff"/>
+    <image href="data:image/png;base64,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" x="8" y="8" width="198" height="198"/>
+    <text x="103" y="260" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" letter-spacing="1" fill="#102b35">OPEN THE SITE</text>
   </g>
 </svg>
