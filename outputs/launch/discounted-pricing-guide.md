@@ -16,6 +16,7 @@ No proof or private financial details are required. A customer can simply say, â
 | Offer | Access rate | Standard reference | Includes |
 |---|---:|---:|---|
 | 20-minute fit call | Free | Free | Confirm the question, format, scope, and next step. |
+| Quick Fix Check-in | $20 / 15 minutes | $20 | One simple remote question or quick setting check; stop when the 15 minutes ends. |
 | Remote Tech Tune-Up | $65 / 60 minutes | $85 | One focused everyday-tech issue or guided setup. |
 | In-person Tech Tune-Up | $85 / 60 minutes | $110 | One focused local issue; travel area confirmed before booking. |
 | Digital Confidence Session | $55 / 60 minutes | $75 | Patient walkthrough while the customer stays in control. |
@@ -23,6 +24,12 @@ No proof or private financial details are required. A customer can simply say, â
 | Follow-up Office Hours | $35 / 30 minutes | $45 | Follow-up on the same approved scope. |
 
 These are recommended starting figures, not a market-average claim. Review them after the first 10 discounted sessions to confirm the work remains sustainable.
+
+### Quick Fix limits
+
+- Remote only, one simple question or setting check, one device, and 15 minutes maximum.
+- No passwords, one-time codes, financial accounts, medical records, legal documents, money movement, emergency support, malware response, data recovery, or multi-step setup.
+- If the issue needs more time, access, or risk than the slot allows, stop and recommend a standard session or qualified specialist. Do not continue without a new quote and approval.
 
 ## Simple rules
 

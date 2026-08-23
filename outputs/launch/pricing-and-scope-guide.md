@@ -14,6 +14,7 @@ These are simple starting prices for a solo operator. They are intentionally eas
 | Offer | Starter price | Includes |
 |---|---:|---|
 | 20-minute fit call | Free | Confirm the question, format, scope, and next step. No troubleshooting promise. |
+| Quick Fix Check-in | $20 / 15 minutes | One simple remote question or quick setting check; stop when the 15 minutes ends. |
 | Remote Tech Tune-Up | $85 / 60 minutes | One focused everyday-tech issue, guided setup, or troubleshooting session. |
 | In-person Tech Tune-Up | $110 / 60 minutes | One focused issue at an agreed local location; travel area confirmed before booking. |
 | Digital Confidence Session | $75 / 60 minutes | Patient walkthrough of a tool or workflow while the customer stays in control. |
