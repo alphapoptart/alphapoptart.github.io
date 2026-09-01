@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import UiIcon from './UiIcon';
 
 const bearings = [
   { id: 'home', heading: 300, label: '300° HOME', caption: 'Devices, Wi-Fi, backups, and home technology.', action: 'Explore home support', href: '#service-home' },
@@ -290,7 +291,7 @@ export default function CompassScene() {
       ))}
 
       <button className="recenter-control" type="button" onClick={() => moveToHeading(0, 'north')}>
-        <span aria-hidden="true">↑</span> Reset route
+        <UiIcon name="north" /> Reset route
       </button>
 
       <div className="bearing-output" aria-hidden="true">
@@ -341,7 +342,7 @@ export default function CompassScene() {
         <div className="scene-route">
           <strong>{activeCopy.caption}</strong>
           {activeCopy.href && activeCopy.action ? (
-            <a href={activeCopy.href}>{activeCopy.action} <span aria-hidden="true">↗</span></a>
+            <a href={activeCopy.href}>{activeCopy.action} <UiIcon name="up-right" /></a>
           ) : null}
         </div>
       </div>

@@ -1,5 +1,6 @@
 import CompassScene from './CompassScene';
 import PricingGrid from './PricingGrid';
+import UiIcon from './UiIcon';
 import Link from 'next/link';
 
 export default function Home() {
@@ -17,7 +18,11 @@ export default function Home() {
           <Link href="/pricing">Pricing</Link>
         </nav>
 
-        <a className="header-cta" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
+        <a className="header-cta" href="#contact">
+          <span className="header-cta-desktop">Let’s talk</span>
+          <span className="header-cta-mobile">Text</span>
+          <UiIcon name="up-right" />
+        </a>
       </header>
 
       <section className="hero" id="top">
@@ -29,8 +34,8 @@ export default function Home() {
             tech that keep getting in your way.
           </p>
           <div className="hero-actions">
-            <a className="button button-dark" href="#contact">Tell me what’s stuck <span aria-hidden="true">↗</span></a>
-            <a className="text-link" href="#services">See how I help <span aria-hidden="true">↓</span></a>
+            <a className="button button-dark" href="#contact">Tell me what’s stuck <UiIcon name="up-right" /></a>
+            <a className="text-link" href="#services">See how I help <UiIcon name="down" /></a>
           </div>
           <div className="human-note">
             <span className="status-dot" aria-hidden="true" />
@@ -64,7 +69,7 @@ export default function Home() {
             <h3>Home technology</h3>
             <p>Devices, Wi-Fi, backups, smart-home basics, and the little glitches that drain your day.</p>
             <ul><li>Setups & tune-ups</li><li>Home tech resets</li><li>Remote quick fixes</li></ul>
-            <a href="#contact">Find your fix <span aria-hidden="true">↗</span></a>
+            <a href="#contact">Find your fix <UiIcon name="up-right" /></a>
           </article>
 
           <article className="service-card service-card-paper" id="service-confidence">
@@ -73,7 +78,7 @@ export default function Home() {
             <h3>Digital confidence</h3>
             <p>Patient, judgment-free walkthroughs that help technology finally make sense.</p>
             <ul><li>One-on-one guidance</li><li>Plain-English answers</li><li>Practice at your pace</li></ul>
-            <a href="#contact">Build confidence <span aria-hidden="true">↗</span></a>
+            <a href="#contact">Build confidence <UiIcon name="up-right" /></a>
           </article>
 
           <article className="service-card service-card-orange" id="service-business">
@@ -82,7 +87,7 @@ export default function Home() {
             <h3>Small-business systems</h3>
             <p>Simple workflows and reliable tools for independent professionals and small teams.</p>
             <ul><li>Workflow cleanup</li><li>Tool selection</li><li>Practical automation</li></ul>
-            <a href="#contact">Clear the bottleneck <span aria-hidden="true">↗</span></a>
+            <a href="#contact">Clear the bottleneck <UiIcon name="up-right" /></a>
           </article>
         </div>
       </section>
@@ -143,7 +148,7 @@ export default function Home() {
         <PricingGrid />
         <div className="pricing-footer">
           <p className="pricing-note">Not sure which fits? Tell me what’s going on and I’ll point you to the lightest-weight option.</p>
-          <Link href="/pricing">Open the full pricing page <span aria-hidden="true">↗</span></Link>
+          <Link href="/pricing">Open the full pricing page <UiIcon name="up-right" /></Link>
         </div>
       </section>
 
@@ -154,19 +159,19 @@ export default function Home() {
         </div>
         <div className="faq-list">
           <details>
-            <summary>Can you help remotely?<span>+</span></summary>
+            <summary>Can you help remotely?<UiIcon name="plus" /></summary>
             <p>Yes. Many quick fixes, account questions, walkthroughs, and tune-ups can be handled by phone or a secure remote session.</p>
           </details>
           <details>
-            <summary>Will I understand what you changed?<span>+</span></summary>
+            <summary>Will I understand what you changed?<UiIcon name="plus" /></summary>
             <p>That’s the point. I explain decisions in plain English, show you what matters, and leave you with a clear next step.</p>
           </details>
           <details>
-            <summary>What if the problem is bigger than expected?<span>+</span></summary>
+            <summary>What if the problem is bigger than expected?<UiIcon name="plus" /></summary>
             <p>We pause and recalibrate. You’ll get a clear recommendation and updated scope before any extra work begins.</p>
           </details>
           <details>
-            <summary>What won’t you handle?<span>+</span></summary>
+            <summary>What won’t you handle?<UiIcon name="plus" /></summary>
             <p>I don’t access financial accounts, move money, handle passwords or one-time codes, enter regulated systems, or provide legal, tax, medical, financial, or cybersecurity advice.</p>
           </details>
         </div>
@@ -178,7 +183,7 @@ export default function Home() {
         <h2>Ready to make technology<br /><em>feel lighter?</em></h2>
         <p>Tell Sean what’s happening. A short text is plenty.</p>
         <div className="contact-actions">
-          <a className="button button-dark" href="sms:+13528750467?body=Hi%20Sean%2C%20I%27d%20like%20some%20tech%20help.">Send a text <span aria-hidden="true">↗</span></a>
+          <a className="button button-dark" href="sms:+13528750467?body=Hi%20Sean%2C%20I%27d%20like%20some%20tech%20help.">Send a text <UiIcon name="up-right" /></a>
           <a className="contact-phone" href="tel:+13528750467"><small>CALL SEAN</small><strong>(352) 875-0467</strong></a>
         </div>
       </section>
