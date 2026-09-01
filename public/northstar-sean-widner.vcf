@@ -1,0 +1,14 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Widner;Sean;;;
+FN:Sean Widner
+ORG:Northstar Tech Concierge
+TITLE:Tech Concierge
+TEL;TYPE=CELL,VOICE,PREF:+13528750467
+URL;TYPE=WORK:https://alphapoptart.github.io/
+PHOTO;VALUE=URI:https://alphapoptart.github.io/icon-512.png
+NOTE:Patient\, plain-English help for home technology\, digital confidence\,
+ and small-business systems.
+CLASS:PUBLIC
+REV:20260901T132500Z
+END:VCARD

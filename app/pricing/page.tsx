@@ -88,7 +88,7 @@ export default function PricingPage() {
           <span><strong>Northstar</strong><small>Tech Concierge</small></span>
         </Link>
         <p>Patient guidance. Plain English. No judgment.</p>
-        <div><Link href="/#services">Services</Link><Link href="/pricing">Pricing</Link><a href="tel:+13528750467">Call</a></div>
+        <div><Link href="/#services">Services</Link><Link href="/pricing">Pricing</Link><Link href="/card">Card</Link><a href="tel:+13528750467">Call</a></div>
         <small>© 2026 Northstar Tech Concierge</small>
       </footer>
     </main>
