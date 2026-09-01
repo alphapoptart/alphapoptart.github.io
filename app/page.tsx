@@ -186,6 +186,7 @@ export default function Home() {
           <a className="button button-dark" href="sms:+13528750467?body=Hi%20Sean%2C%20I%27d%20like%20some%20tech%20help.">Send a text <UiIcon name="up-right" /></a>
           <a className="contact-phone" href="tel:+13528750467"><small>CALL SEAN</small><strong>(352) 875-0467</strong></a>
         </div>
+        <Link className="contact-card-link" href="/card">Save my digital business card <UiIcon name="up-right" /></Link>
       </section>
 
       <footer>
@@ -194,7 +195,7 @@ export default function Home() {
           <span><strong>Northstar</strong><small>Tech Concierge</small></span>
         </a>
         <p>Patient guidance. Plain English. No judgment.</p>
-        <div><a href="#services">Services</a><Link href="/pricing">Pricing</Link><a href="tel:+13528750467">Call</a></div>
+        <div><a href="#services">Services</a><Link href="/pricing">Pricing</Link><Link href="/card">Card</Link><a href="tel:+13528750467">Call</a></div>
         <small>© 2026 Northstar Tech Concierge</small>
       </footer>
     </main>
