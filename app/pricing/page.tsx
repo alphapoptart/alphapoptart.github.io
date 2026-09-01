@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import PricingGrid from '../PricingGrid';
+import UiIcon from '../UiIcon';
 
 export const metadata: Metadata = {
   title: 'Pricing | Northstar Tech Concierge',
@@ -35,14 +36,18 @@ export default function PricingPage() {
           <Link href="/pricing" aria-current="page">Pricing</Link>
         </nav>
 
-        <Link className="header-cta" href="/#contact">Let’s talk <span aria-hidden="true">↗</span></Link>
+        <Link className="header-cta" href="/#contact">
+          <span className="header-cta-desktop">Let’s talk</span>
+          <span className="header-cta-mobile">Text</span>
+          <UiIcon name="up-right" />
+        </Link>
       </header>
 
       <section className="pricing-page-hero">
         <p className="eyebrow"><span /> Clear before we begin</p>
         <h1>Straight answers.<br /><em>Human-sized prices.</em></h1>
         <p>Choose a starting point or simply describe what’s happening. Sean will help you find the lightest-weight option that fits.</p>
-        <Link className="text-link" href="/">← Back to home</Link>
+        <Link className="text-link text-link-back" href="/"><UiIcon name="left" /> Back to home</Link>
       </section>
 
       <section className="pricing section-shell pricing-page-grid" aria-labelledby="pricing-options">
@@ -72,7 +77,7 @@ export default function PricingPage() {
           <h2>Start with the problem.<br /><em>We’ll find the right session.</em></h2>
         </div>
         <div>
-          <a className="button button-dark" href="sms:+13528750467?body=Hi%20Sean%2C%20I%27m%20not%20sure%20which%20service%20fits.%20Here%27s%20what%27s%20going%20on%3A%20">Describe it by text <span aria-hidden="true">↗</span></a>
+          <a className="button button-dark" href="sms:+13528750467?body=Hi%20Sean%2C%20I%27m%20not%20sure%20which%20service%20fits.%20Here%27s%20what%27s%20going%20on%3A%20">Describe it by text <UiIcon name="up-right" /></a>
           <a className="contact-phone" href="tel:+13528750467"><small>CALL SEAN</small><strong>(352) 875-0467</strong></a>
         </div>
       </section>
