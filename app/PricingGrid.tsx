@@ -1,52 +1,18 @@
-import Link from 'next/link';
 import UiIcon from './UiIcon';
 
-type PricingGridProps = {
-  contactHref?: string;
-};
+type PriceOption = { category: string; duration: string; name: string; description: string; price: number; ctaLabel: string; smsBody: string; featured?: boolean; compact?: boolean };
+const message = (offer: string) => `sms:+13528750467?body=${encodeURIComponent(`Hi Sean, I'd like help with ${offer}.`).replace(/'/g, '%27')}`;
+const options: PriceOption[] = [
+  { category: 'REMOTE', duration: '15 MIN', name: 'Quick Fix', description: 'A focused remote session for one clear issue.', price: 20, ctaLabel: 'Book by text', smsBody: message('a Quick Fix'), featured: true },
+  { category: 'REMOTE', duration: '60 MIN', name: 'Remote Tune-Up', description: 'Troubleshooting, setup, or a guided cleanup.', price: 65, ctaLabel: 'Book by text', smsBody: message('a Remote Tune-Up') },
+  { category: 'IN PERSON', duration: '60 MIN', name: 'In-person Tune-Up', description: 'Hands-on support for your home technology.', price: 85, ctaLabel: 'Ask about this session', smsBody: message('an In-person Tune-Up') },
+  { category: 'GUIDANCE', duration: '60 MIN', name: 'Digital Confidence', description: 'Patient one-on-one learning.', price: 55, ctaLabel: 'Ask about this session', smsBody: message('Digital Confidence'), compact: true },
+  { category: 'HOME', duration: '90 MIN', name: 'Home Technology Reset', description: 'A deeper review and reset.', price: 125, ctaLabel: 'Book by text', smsBody: message('a Home Technology Reset'), compact: true },
+  { category: 'FOLLOW-UP', duration: '30 MIN', name: 'Office Hours', description: 'Keep momentum after a session.', price: 35, ctaLabel: 'Ask about this session', smsBody: message('Office Hours'), compact: true },
+];
 
-export default function PricingGrid({ contactHref = '#contact' }: PricingGridProps) {
-  return (
-    <div className="price-grid">
-      <article className="price-card featured-price">
-        <div className="price-top"><span>REMOTE</span><i>15 MIN</i></div>
-        <h3>Quick Fix</h3>
-        <p>A focused remote session for one clear issue.</p>
-        <strong><sup>$</sup>20</strong>
-        <a href="sms:+13528750467?body=Hi%20Sean%2C%20I%27d%20like%20help%20with%20a%20Quick%20Fix.">Book by text <UiIcon name="up-right" /></a>
-      </article>
-      <article className="price-card">
-        <div className="price-top"><span>REMOTE</span><i>60 MIN</i></div>
-        <h3>Remote Tune-Up</h3>
-        <p>Troubleshooting, setup, or a guided cleanup.</p>
-        <strong><sup>$</sup>65</strong>
-        <Link href={contactHref}>Get started <UiIcon name="up-right" /></Link>
-      </article>
-      <article className="price-card">
-        <div className="price-top"><span>IN PERSON</span><i>60 MIN</i></div>
-        <h3>In-person Tune-Up</h3>
-        <p>Hands-on support for your home technology.</p>
-        <strong><sup>$</sup>85</strong>
-        <Link href={contactHref}>Check availability <UiIcon name="up-right" /></Link>
-      </article>
-      <article className="price-card compact-price">
-        <div className="price-top"><span>GUIDANCE</span><i>60 MIN</i></div>
-        <h3>Digital Confidence</h3>
-        <p>Patient one-on-one learning.</p>
-        <strong><sup>$</sup>55</strong>
-      </article>
-      <article className="price-card compact-price">
-        <div className="price-top"><span>HOME</span><i>90 MIN</i></div>
-        <h3>Home Technology Reset</h3>
-        <p>A deeper review and reset.</p>
-        <strong><sup>$</sup>125</strong>
-      </article>
-      <article className="price-card compact-price">
-        <div className="price-top"><span>FOLLOW-UP</span><i>30 MIN</i></div>
-        <h3>Office Hours</h3>
-        <p>Keep momentum after a session.</p>
-        <strong><sup>$</sup>35</strong>
-      </article>
-    </div>
-  );
+export default function PricingGrid(): React.ReactNode {
+  return <div className="price-grid">{options.map((option) => <article className={`price-card${option.featured ? ' featured-price' : ''}${option.compact ? ' compact-price' : ''}`} key={option.name}>
+    <div className="price-top"><span>{option.category}</span><i>{option.duration}</i></div><h3>{option.name}</h3><p>{option.description}</p><strong><sup>$</sup>{option.price}</strong><a href={option.smsBody}>{option.ctaLabel} <UiIcon name="up-right" /></a>
+  </article>)}</div>;
 }

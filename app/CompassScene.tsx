@@ -28,12 +28,16 @@ function formatHeading(value: number) {
   return `${Math.round(normalizeHeading(value)).toString().padStart(3, '0')}°`;
 }
 
-function resetCompassParallax(stage: HTMLDivElement | null, stageRectRef: React.RefObject<DOMRect | null>) {
+function resetCompassParallax(stage: HTMLDivElement | null, stageRectRef: React.RefObject<DOMRect | null>, frameRef?: React.MutableRefObject<number | null>) {
+  if (frameRef?.current !== null && frameRef?.current !== undefined) cancelAnimationFrame(frameRef.current);
+  if (frameRef) frameRef.current = null;
   if (!stage) return;
   stage.style.setProperty('--rx', '-2deg');
   stage.style.setProperty('--ry', '4deg');
   stage.style.setProperty('--px', '0px');
   stage.style.setProperty('--py', '0px');
+  stage.style.setProperty('--light-x', '50%');
+  stage.style.setProperty('--light-y', '35%');
   stageRectRef.current = null;
 }
 
@@ -59,7 +63,7 @@ export default function CompassScene() {
     const media = window.matchMedia('(prefers-reduced-motion: reduce)');
     const updateMotionPreference = () => {
       reducedMotionRef.current = media.matches;
-      if (media.matches) resetCompassParallax(stageRef.current, stageRectRef);
+      if (media.matches) resetCompassParallax(stageRef.current, stageRectRef, transformFrameRef);
     };
 
     updateMotionPreference();
@@ -68,6 +72,7 @@ export default function CompassScene() {
     return () => {
       media.removeEventListener('change', updateMotionPreference);
       if (transformFrameRef.current !== null) cancelAnimationFrame(transformFrameRef.current);
+      transformFrameRef.current = null;
       if (headingFrameRef.current !== null) cancelAnimationFrame(headingFrameRef.current);
       if (snapTimerRef.current !== null) clearTimeout(snapTimerRef.current);
     };
@@ -160,7 +165,7 @@ export default function CompassScene() {
   }
 
   function handleStagePointerMove(event: React.PointerEvent<HTMLDivElement>) {
-    if (reducedMotionRef.current) return;
+    if (event.pointerType !== 'mouse' || reducedMotionRef.current || draggingRef.current) return;
     const stage = stageRef.current;
     const rect = stageRectRef.current;
     if (!stage || !rect) return;
@@ -177,12 +182,14 @@ export default function CompassScene() {
       stage.style.setProperty('--ry', `${x * 13}deg`);
       stage.style.setProperty('--px', `${x * 14}px`);
       stage.style.setProperty('--py', `${y * 14}px`);
+      stage.style.setProperty('--light-x', `${(x + 0.5) * 100}%`);
+      stage.style.setProperty('--light-y', `${(y + 0.5) * 100}%`);
       transformFrameRef.current = null;
     });
   }
 
   function resetParallax() {
-    resetCompassParallax(stageRef.current, stageRectRef);
+    resetCompassParallax(stageRef.current, stageRectRef, transformFrameRef);
   }
 
   function steerFromPointer(event: React.PointerEvent<HTMLDivElement>) {
@@ -274,6 +281,12 @@ export default function CompassScene() {
     >
       <div className="orbit orbit-one" aria-hidden="true" />
       <div className="orbit orbit-two" aria-hidden="true" />
+      <div className="scene-floor" aria-hidden="true" />
+      <div className="scene-ring scene-ring-back" aria-hidden="true" />
+      <div className="scene-ring scene-ring-front" aria-hidden="true" />
+      <i className="orbit-node orbit-node-a" aria-hidden="true" />
+      <i className="orbit-node orbit-node-b" aria-hidden="true" />
+      <i className="orbit-node orbit-node-c" aria-hidden="true" />
       <span className="scene-star star-one" aria-hidden="true">✦</span>
       <span className="scene-star star-two" aria-hidden="true">✦</span>
 
