@@ -347,6 +347,10 @@ h1 em { display: block; font-family: Georgia, 'Times New Roman', serif; font-wei
 .contact-card-copy dd { margin: 0; color: var(--paper); font-size: 12px; font-weight: 700; }
 .contact-card-footer { position: relative; z-index: 2; margin-top: 28px; padding-top: 18px; display: flex; justify-content: space-between; gap: 20px; border-top: 1px solid rgba(245,247,243,.16); color: #8fa7ac; font: 500 7px/1.2 var(--font-dm-mono), monospace; letter-spacing: .08em; text-transform: uppercase; }
 .contact-card-footer span:first-child { color: var(--lime); }
+.contact-card-footer { align-items: center; flex-wrap: wrap; }
+.contact-card-footer nav { display: flex; gap: 8px; }
+.contact-card-footer nav a { min-width: 44px; min-height: 44px; display: grid; place-items: center; border: 1px solid rgba(245,247,243,.25); border-radius: 8px; color: var(--paper); }
+.contact-card-copy dd a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: underline; text-underline-offset: 4px; }
 
 .card-setup { padding-top: 118px; }
 .card-steps { margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); list-style: none; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }

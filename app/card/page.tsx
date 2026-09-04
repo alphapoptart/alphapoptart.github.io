@@ -58,13 +58,13 @@ export default function DigitalCardPage() {
               <h2>Sean<br />Widner</h2>
               <p>Tech Concierge</p>
               <dl>
-                <div><dt>Call or text</dt><dd>(352) 875-0467</dd></div>
-                <div><dt>Online</dt><dd>alphapoptart.github.io</dd></div>
+                <div><dt>Call or text</dt><dd><a href="tel:+13528750467">(352) 875-0467</a></dd></div>
+                <div><dt>Online</dt><dd><Link href="/">alphapoptart.github.io</Link></dd></div>
               </dl>
             </div>
             <div className="contact-card-footer">
               <span>Technology, made human.</span>
-              <span>Save · Share · Call</span>
+              <nav aria-label="Business card actions"><a href={contactCardHref}>Save</a><a href="sms:?body=Northstar%20Tech%20Concierge%3A%20https%3A%2F%2Falphapoptart.github.io%2Fcard%2F">Share</a><a href="tel:+13528750467">Call</a></nav>
             </div>
           </article>
         </div>
@@ -96,7 +96,7 @@ export default function DigitalCardPage() {
         <h2>Share the card link instead.</h2>
         <p>Anyone can open the page and save the same contact card—even without NameDrop.</p>
         <a className="card-share-url" href="https://alphapoptart.github.io/card/">alphapoptart.github.io/card</a>
-        <a className="button button-dark" href="sms:?&body=Northstar%20Tech%20Concierge%3A%20https%3A%2F%2Falphapoptart.github.io%2Fcard%2F">Share card by text <UiIcon name="up-right" /></a>
+        <a className="button button-dark" href="sms:?body=Northstar%20Tech%20Concierge%3A%20https%3A%2F%2Falphapoptart.github.io%2Fcard%2F">Share card by text <UiIcon name="up-right" /></a>
       </section>
 
       <footer>
