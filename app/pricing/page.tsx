@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import PricingGrid from '../PricingGrid';
 import UiIcon from '../UiIcon';
+import SiteHeader from '../SiteHeader';
 
 export const metadata: Metadata = {
   title: 'Pricing | Northstar Tech Concierge',
@@ -24,26 +25,8 @@ export const metadata: Metadata = {
 export default function PricingPage() {
   return (
     <main>
-      <header className="site-header">
-        <Link className="brand" href="/" aria-label="Northstar Tech Concierge, home">
-          <span className="brand-mark" aria-hidden="true"><i /></span>
-          <span><strong>Northstar</strong><small>Tech Concierge</small></span>
-        </Link>
-
-        <nav className="desktop-nav" aria-label="Primary navigation">
-          <Link href="/#services">Services</Link>
-          <Link href="/#process">How it works</Link>
-          <Link href="/pricing" aria-current="page">Pricing</Link>
-        </nav>
-
-        <Link className="header-cta" href="/#contact">
-          <span className="header-cta-desktop">Let’s talk</span>
-          <span className="header-cta-mobile">Text</span>
-          <UiIcon name="up-right" />
-        </Link>
-      </header>
-
-      <section className="pricing-page-hero">
+      <SiteHeader currentPage="pricing" />
+      <section className="pricing-page-hero" id="main-content">
         <p className="eyebrow"><span /> Clear before we begin</p>
         <h1>Straight answers.<br /><em>Human-sized prices.</em></h1>
         <p>Choose a starting point or simply describe what’s happening. Sean will help you find the lightest-weight option that fits.</p>
@@ -58,7 +41,7 @@ export default function PricingPage() {
             <p>Scope and price are agreed before work begins. If the job changes, you hear about it first.</p>
           </div>
         </div>
-        <PricingGrid contactHref="/#contact" />
+        <PricingGrid />
       </section>
 
       <section className="pricing-promise">

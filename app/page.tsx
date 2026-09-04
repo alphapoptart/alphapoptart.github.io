@@ -2,30 +2,13 @@ import CompassScene from './CompassScene';
 import PricingGrid from './PricingGrid';
 import UiIcon from './UiIcon';
 import Link from 'next/link';
+import SiteHeader from './SiteHeader';
 
 export default function Home() {
   return (
-    <main>
-      <header className="site-header">
-        <a className="brand" href="#top" aria-label="Northstar Tech Concierge, home">
-          <span className="brand-mark" aria-hidden="true"><i /></span>
-          <span><strong>Northstar</strong><small>Tech Concierge</small></span>
-        </a>
-
-        <nav className="desktop-nav" aria-label="Primary navigation">
-          <a href="#services">Services</a>
-          <a href="#process">How it works</a>
-          <Link href="/pricing">Pricing</Link>
-        </nav>
-
-        <a className="header-cta" href="#contact">
-          <span className="header-cta-desktop">Let’s talk</span>
-          <span className="header-cta-mobile">Text</span>
-          <UiIcon name="up-right" />
-        </a>
-      </header>
-
-      <section className="hero" id="top">
+    <main id="top">
+      <SiteHeader currentPage="home" />
+      <section className="hero" id="main-content">
         <div className="hero-copy">
           <p className="eyebrow"><span /> Calm, human technology support</p>
           <h1>Technology should feel like a <em>tailwind.</em></h1>
@@ -34,7 +17,7 @@ export default function Home() {
             tech that keep getting in your way.
           </p>
           <div className="hero-actions">
-            <a className="button button-dark" href="#contact">Tell me what’s stuck <UiIcon name="up-right" /></a>
+            <a className="button button-dark" href="sms:+13528750467?body=Hi%20Sean%2C%20I%27d%20like%20some%20tech%20help.">Tell me what’s stuck <UiIcon name="up-right" /></a>
             <a className="text-link" href="#services">See how I help <UiIcon name="down" /></a>
           </div>
           <div className="human-note">
@@ -69,7 +52,7 @@ export default function Home() {
             <h3>Home technology</h3>
             <p>Devices, Wi-Fi, backups, smart-home basics, and the little glitches that drain your day.</p>
             <ul><li>Setups & tune-ups</li><li>Home tech resets</li><li>Remote quick fixes</li></ul>
-            <a href="#contact">Find your fix <UiIcon name="up-right" /></a>
+            <a href="sms:+13528750467?body=Hi%20Sean%2C%20I%27d%20like%20help%20with%20Home%20technology.">Find your fix <UiIcon name="up-right" /></a>
           </article>
 
           <article className="service-card service-card-paper" id="service-confidence">
@@ -78,7 +61,7 @@ export default function Home() {
             <h3>Digital confidence</h3>
             <p>Patient, judgment-free walkthroughs that help technology finally make sense.</p>
             <ul><li>One-on-one guidance</li><li>Plain-English answers</li><li>Practice at your pace</li></ul>
-            <a href="#contact">Build confidence <UiIcon name="up-right" /></a>
+            <a href="sms:+13528750467?body=Hi%20Sean%2C%20I%27d%20like%20help%20with%20Digital%20confidence.">Build confidence <UiIcon name="up-right" /></a>
           </article>
 
           <article className="service-card service-card-orange" id="service-business">
@@ -87,7 +70,7 @@ export default function Home() {
             <h3>Small-business systems</h3>
             <p>Simple workflows and reliable tools for independent professionals and small teams.</p>
             <ul><li>Workflow cleanup</li><li>Tool selection</li><li>Practical automation</li></ul>
-            <a href="#contact">Clear the bottleneck <UiIcon name="up-right" /></a>
+            <a href="sms:+13528750467?body=Hi%20Sean%2C%20I%27d%20like%20help%20with%20Small-business%20systems.">Clear the bottleneck <UiIcon name="up-right" /></a>
           </article>
         </div>
       </section>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import UiIcon from '../UiIcon';
+import SiteHeader from '../SiteHeader';
 
 const contactCardHref = '/northstar-sean-widner.vcf';
 
@@ -25,26 +26,8 @@ export const metadata: Metadata = {
 export default function DigitalCardPage() {
   return (
     <main className="digital-card-page">
-      <header className="site-header">
-        <Link className="brand" href="/" aria-label="Northstar Tech Concierge, home">
-          <span className="brand-mark" aria-hidden="true"><i /></span>
-          <span><strong>Northstar</strong><small>Tech Concierge</small></span>
-        </Link>
-
-        <nav className="desktop-nav" aria-label="Primary navigation">
-          <Link href="/#services">Services</Link>
-          <Link href="/pricing">Pricing</Link>
-          <Link href="/card" aria-current="page">Digital card</Link>
-        </nav>
-
-        <a className="header-cta" href={contactCardHref}>
-          <span className="header-cta-desktop">Save card</span>
-          <span className="header-cta-mobile">Save</span>
-          <UiIcon name="down" />
-        </a>
-      </header>
-
-      <section className="digital-card-hero">
+      <SiteHeader currentPage="card" />
+      <section className="digital-card-hero" id="main-content">
         <div className="digital-card-intro">
           <p className="eyebrow"><span /> One tap from “I know a tech person”</p>
           <h1>Your Northstar contact.<em>Ready when tech gets tangled.</em></h1>
