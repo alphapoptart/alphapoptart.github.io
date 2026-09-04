@@ -11,7 +11,7 @@ export default function Home() {
       <section className="hero" id="main-content">
         <div className="hero-copy">
           <p className="eyebrow"><span /> Calm, human technology support</p>
-          <h1>Technology should feel like a <em>tailwind.</em></h1>
+          <h1>Technology should feel <em>simple.</em></h1>
           <p className="hero-lede">
             Patient, plain-English help for the devices, accounts, and everyday
             tech that keep getting in your way.
