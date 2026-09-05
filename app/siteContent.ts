@@ -1,0 +1,4 @@
+export type BusinessProfile = { businessName: string; ownerName: string; role: string; phoneDisplay: string; phoneE164: string; publicWebsiteUrl: string; serviceArea: string | null; availability: string | null; experienceSummary: string | null; publicEmail: string | null; customDomain: string | null };
+export type ApprovedTestimonial = { quote: string; attribution: string; attributionDetail?: string; publicConsentConfirmed: true };
+export const businessProfile: BusinessProfile = { businessName: 'Northstar Tech Concierge', ownerName: 'Sean Widner', role: 'Tech Concierge', phoneDisplay: '(352) 875-0467', phoneE164: '+13528750467', publicWebsiteUrl: 'https://alphapoptart.github.io/', serviceArea: null, availability: null, experienceSummary: null, publicEmail: null, customDomain: null };
+export const approvedTestimonials: ApprovedTestimonial[] = [];
