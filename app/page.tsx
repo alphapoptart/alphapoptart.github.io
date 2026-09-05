@@ -3,6 +3,7 @@ import PricingGrid from './PricingGrid';
 import UiIcon from './UiIcon';
 import Link from 'next/link';
 import SiteHeader from './SiteHeader';
+import { approvedTestimonials, businessProfile } from './siteContent';
 
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
             tech that keep getting in your way.
           </p>
           <div className="hero-actions">
-            <a className="button button-dark" href="sms:+13528750467?body=Hi%20Sean%2C%20I%27d%20like%20some%20tech%20help.">Tell me what’s stuck <UiIcon name="up-right" /></a>
+            <Link className="button button-dark" href="/request/">Tell me what’s stuck <UiIcon name="up-right" /></Link>
             <a className="text-link" href="#services">See how I help <UiIcon name="down" /></a>
           </div>
           <div className="human-note">
@@ -36,9 +37,14 @@ export default function Home() {
         <span>Human-sized support</span>
       </aside>
 
+      <section className="problem-chooser section-shell" aria-labelledby="chooser-heading">
+        <div className="section-intro"><p className="section-index">02 / START WITH THE PROBLEM</p><div><h2 id="chooser-heading">What kind of help would feel useful?</h2><p>Choose a starting point and describe the issue in your own words.</p></div></div>
+        <div className="problem-grid"><Link href="/request/?help=wifi#request-form"><strong>Wi-Fi &amp; connections</strong><span>Connection and device glitches.</span><UiIcon name="up-right" /></Link><Link href="/request/?help=new-device#request-form"><strong>New device setup</strong><span>Initial setup for a new device.</span><UiIcon name="up-right" /></Link><Link href="/request/?help=learning#request-form"><strong>Learn it with me</strong><span>Patient app, account, or workflow learning.</span><UiIcon name="up-right" /></Link><Link href="/request/?help=business#request-form"><strong>Business workflow</strong><span>Workflow, tool, or practical automation planning.</span><UiIcon name="up-right" /></Link><Link href="/request/?help=unsure#request-form"><strong>Not sure yet</strong><span>Describe the issue and find a useful next step.</span><UiIcon name="up-right" /></Link></div>
+      </section>
+
       <section className="services section-shell" id="services">
         <div className="section-intro">
-          <p className="section-index">02 / YOUR COORDINATES</p>
+          <p className="section-index">03 / YOUR COORDINATES</p>
           <div>
             <h2>One calm point of contact for the tech in your life.</h2>
             <p>Bring me the thing that’s been bugging you. We’ll find the smallest useful way forward.</p>
@@ -70,15 +76,19 @@ export default function Home() {
             <h3>Small-business systems</h3>
             <p>Simple workflows and reliable tools for independent professionals and small teams.</p>
             <ul><li>Workflow cleanup</li><li>Tool selection</li><li>Practical automation</li></ul>
-            <a href="sms:+13528750467?body=Hi%20Sean%2C%20I%27d%20like%20help%20with%20Small-business%20systems.">Clear the bottleneck <UiIcon name="up-right" /></a>
+            <Link href="/request/?help=business#request-form">Clear the bottleneck <UiIcon name="up-right" /></Link>
           </article>
         </div>
       </section>
 
+      <section className="meet-sean section-shell" aria-labelledby="meet-heading"><div className="section-intro"><p className="section-index">04 / MEET SEAN</p><div><h2 id="meet-heading">A calm point of contact.</h2><p>Sean Widner runs Northstar Tech Concierge and works directly with each customer. His approach is patient and plain-English: agree on the problem and price first, make only the approved changes, explain what changed, and keep you in control of your devices and accounts.</p></div></div><div className="meet-facts"><div><strong>01</strong><span>Direct contact with Sean</span></div><div><strong>02</strong><span>Scope and price agreed before changes</span></div><div><strong>03</strong><span>Passwords and one-time codes stay with the customer</span></div></div></section>
+      {(businessProfile.serviceArea || businessProfile.availability || businessProfile.experienceSummary) && <section className="meet-optional section-shell">{businessProfile.serviceArea && <p>{businessProfile.serviceArea}</p>}{businessProfile.availability && <p>{businessProfile.availability}</p>}{businessProfile.experienceSummary && <p>{businessProfile.experienceSummary}</p>}</section>}
+      {approvedTestimonials.length > 0 && <section className="testimonials section-shell"><p className="section-index">CUSTOMER NOTES</p>{approvedTestimonials.map((testimonial) => <blockquote key={testimonial.quote}>“{testimonial.quote}”<cite>{testimonial.attribution}{testimonial.attributionDetail ? `, ${testimonial.attributionDetail}` : ''}</cite></blockquote>)}</section>}
+
       <section className="process" id="process">
         <div className="process-inner">
           <div className="process-heading">
-            <p className="section-index section-index-light">03 / HOW IT WORKS</p>
+          <p className="section-index section-index-light">05 / HOW IT WORKS</p>
             <h2>Less overwhelm.<br /><em>More true north.</em></h2>
             <p>No mystery process and no open-ended meter. You’ll always know what we’re doing and why.</p>
             <div className="process-instrument" aria-hidden="true">
@@ -108,7 +118,7 @@ export default function Home() {
 
       <section className="privacy section-shell">
         <div className="privacy-statement">
-          <p className="section-index">04 / PRIVACY, ALWAYS</p>
+          <p className="section-index">06 / PRIVACY, ALWAYS</p>
           <h2>Your technology is personal.<br /><em>Your control stays yours.</em></h2>
           <p>I’ll never ask for passwords, one-time codes, access to financial accounts, or permission to move money. If a task crosses a safety boundary, I’ll say so plainly.</p>
         </div>
@@ -121,7 +131,7 @@ export default function Home() {
 
       <section className="pricing section-shell" id="pricing">
         <div className="section-intro pricing-intro">
-          <p className="section-index">05 / SIMPLE PRICING</p>
+          <p className="section-index">07 / SIMPLE PRICING</p>
           <div>
             <h2>Clear starting points.<br />No mystery invoices.</h2>
             <p>We agree on scope before work begins. If the job changes, you hear about it first.</p>
@@ -137,10 +147,14 @@ export default function Home() {
 
       <section className="faq section-shell" id="faq">
         <div className="faq-heading">
-          <p className="section-index">06 / GOOD TO KNOW</p>
+          <p className="section-index">08 / GOOD TO KNOW</p>
           <h2>A few plain-English answers.</h2>
         </div>
         <div className="faq-list">
+          <details>
+            <summary>Do you offer ongoing support?<UiIcon name="plus" /></summary>
+            <p>You can ask about help beyond one session. Frequency, scope, availability, and price are discussed before anything is scheduled.</p>
+          </details>
           <details>
             <summary>Can you help remotely?<UiIcon name="plus" /></summary>
             <p>Yes. Many quick fixes, account questions, walkthroughs, and tune-ups can be handled by phone or a secure remote session.</p>
@@ -162,7 +176,7 @@ export default function Home() {
 
       <section className="contact" id="contact">
         <div className="contact-orbit" aria-hidden="true"><span /><i /></div>
-        <p className="section-index">07 / LET’S GET YOU UNSTUCK</p>
+        <p className="section-index">09 / LET’S GET YOU UNSTUCK</p>
         <h2>Ready to make technology<br /><em>feel lighter?</em></h2>
         <p>Tell Sean what’s happening. A short text is plenty.</p>
         <div className="contact-actions">
